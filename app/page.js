@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <Suspense fallback={<p className="text-center">Loading emails...</p>}>
+      <Suspense fallback={<p className="text-center">Loading...</p>}>
         <EmailList />
       </Suspense>
     </div>
