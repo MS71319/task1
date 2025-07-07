@@ -28,38 +28,39 @@ const EmailList = () => {
     });
 
   return (
-    <div className="px-6 py-10">
-   <div className="flex flex-wrap gap-6 items-center justify-center my-6">
+      <div className="px-6 py-10">
+       <div className="flex flex-nowrap items-center gap-3 overflow-x-auto px-4 sm:px-6 lg:px-10 my-6">
+  {/* Filter Label */}
+  <span className="text-xs sm:text-sm md:text-md font-semibold text-gray-800 whitespace-nowrap pl-4 sm:pl-0 md:pl-2">
+    Filter by:
+  </span>
+
   {/* Vertical Filter */}
-  <div className="relative inline-block">
-    <label className="block text-sm font-medium text-gray-700 mb-1">Vertical</label>
-    <select
-      className="bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400 transition"
-      value={selectedVertical}
-      onChange={(e) => setVertical(e.target.value)}
-    >
-      <option value="">All Verticals</option>
-      {verticals.map((v, i) => (
-        <option key={i} value={v}>{v}</option>
-      ))}
-    </select>
-  </div>
+  <select
+    className="bg-white border border-gray-300 text-xs sm:text-sm text-gray-700 py-2 px-3 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-red-400 transition"
+    value={selectedVertical}
+    onChange={(e) => setVertical(e.target.value)}
+  >
+    <option value="">All Verticals</option>
+    {verticals.map((v, i) => (
+      <option key={i} value={v}>{v}</option>
+    ))}
+  </select>
 
   {/* Category Filter */}
-  <div className="relative inline-block">
-    <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-    <select
-      className="bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400 transition"
-      value={selectedCategory}
-      onChange={(e) => setCategory(e.target.value)}
-    >
-      <option value="">All Categories</option>
-      {categories.map((c, i) => (
-        <option key={i} value={c}>{c}</option>
-      ))}
-    </select>
-  </div>
+  <select
+    className="bg-white border border-gray-300 text-xs sm:text-sm text-gray-700 py-2 px-3 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-red-400 transition"
+    value={selectedCategory}
+    onChange={(e) => setCategory(e.target.value)}
+  >
+    <option value="">All Categories</option>
+    {categories.map((c, i) => (
+      <option key={i} value={c}>{c}</option>
+    ))}
+  </select>
 </div>
+
+
 
 
       {/* Email Grid */}

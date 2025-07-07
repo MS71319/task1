@@ -10,7 +10,7 @@ const SearchForm = () => {
     <form
       action="/"
       method="GET"
-      className="flex items-center gap-3 border border-gray-300 rounded-full px-4 py-2 bg-white shadow-md w-full max-w-4xl transition focus-within:ring-2 focus-within:ring-red-400"
+      className="flex items-center gap-3 border border-gray-300 rounded-3xl px-4 py-2 bg-white shadow-sm w-full max-w-4xl transition focus-within:ring-2 focus-within:ring-red-400"
     >
       <input
         type="text"
@@ -21,7 +21,7 @@ const SearchForm = () => {
       />
       <button
         type="submit"
-        className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 transition"
+        className="bg-red-500 text-white px-4 py-1 rounded-4xl hover:bg-red-600 transition"
       >
         Search
       </button>
