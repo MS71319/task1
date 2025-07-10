@@ -30,12 +30,10 @@ const EmailList = () => {
   return (
       <div className="px-6 py-10">
       <div className="flex flex-nowrap items-center gap-2 sm:gap-3 overflow-x-auto px-3 sm:px-6 lg:px-10 my-4">
-        {/* Filter Label */}
         <span className="text-[10px] sm:text-xs md:text-sm font-semibold text-gray-800 whitespace-nowrap pl-1 sm:pl-0">
           Filter by:
         </span>
 
-        {/* Vertical Filter */}
         <select
           className="bg-white border border-gray-300 text-[10px] sm:text-sm text-gray-700 py-1 px-2 sm:py-2 sm:px-3 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-red-400 transition"
           value={selectedVertical}
@@ -47,11 +45,11 @@ const EmailList = () => {
           ))}
         </select>
 
-        {/* Category Filter */}
         <select
           className="bg-white border border-gray-300 text-[10px] sm:text-sm text-gray-700 py-1 px-2 sm:py-2 sm:px-3 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-red-400 transition"
           value={selectedCategory}
           onChange={(e) => setCategory(e.target.value)}
+          
         >
           <option value="">All Categories</option>
           {categories.map((c, i) => (
@@ -64,8 +62,7 @@ const EmailList = () => {
 
 
 
-      {/* Email Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredEmails.length > 0 ? (
           filteredEmails.map((email, i) => <EmailCard key={i} email={email} />)
         ) : (
